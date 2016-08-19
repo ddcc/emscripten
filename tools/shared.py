@@ -922,7 +922,7 @@ if USE_EMSDK:
     path_from_root('system', 'lib', 'libcxxabi', 'include')
   ]
 
-  C_OPTS = ['-nostdinc', '-Xclang', '-nobuiltininc', '-Xclang', '-nostdsysteminc']
+  C_OPTS = ['-nostdinc', '-Xclang', '-nobuiltininc', '-Xclang', '-nostdsysteminc', '-fsanitize=cfi', '-flto', '-fvisibility=hidden']
 
   def include_directive(paths):
     result = []
